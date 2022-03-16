@@ -117,9 +117,10 @@ int main()
 				{
 				case 1:
 
-					if (account >= weapon[0].get_Wea_Price())
+					if (account >= weapon[0].get_Wea_Price() /*&& weapon[0].set_Wea_Owned()*/)
 					{
 						account = account - weapon[0].get_Wea_Price();
+						/*weapon[0].change_Owned();*/
 						std::cout << "You have purchased " << weapon[0].get_Wea_Name() << std::endl;
 					}
 
